@@ -8,8 +8,8 @@ class ListController extends BaseController
 {
     public function __invoke(ListRequest $request)
     {
-        //$validated = $request->validated();
+        $validated = $request->validated();
 
-        return $this->service->list([]);
+        return $this->service->list($validated);
     }
 }
