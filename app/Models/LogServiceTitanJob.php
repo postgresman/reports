@@ -10,23 +10,10 @@ class LogServiceTitanJob extends Model
 {
     use SoftDeletes;
 
-    protected $casts = [
-        'tag_type_ids' => 'array',
-        'chargebee' => 'array',
-        'web_session_data' => 'array',
-        'attributions_sent' => 'array',
-        'start' => 'datetime',
-        'end' => 'datetime',
-        'arrival_window_start' => 'datetime',
-        'arrival_window_end' => 'datetime',
-    ];
-
     protected $fillable = [
-        'market_id','service_titan_job_id','business_unit_id','job_type_id',
-        'tag_type_ids','technician_id','campaign_id','start','end',
-        'arrival_window_start','arrival_window_end','customer_id','location_id',
-        'latitude','longitude','summary','chargebee','web_session_data',
-        'attributions_sent','job_status','s2f','referral_id'
+        'market_id',
+        'start',
+        'end'       
     ];
 
     public function market() {

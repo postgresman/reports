@@ -6,10 +6,6 @@ use Laravel\Sanctum\PersonalAccessToken as SanctumPersonalAccessToken;
 
 class PersonalAccessToken extends SanctumPersonalAccessToken
 {
-    protected $casts = [
-        'abilities' => 'array',
-    ];
-
     public function getFormattedLastUsedAttribute()
     {
         return $this->last_used_at ? $this->last_used_at->diffForHumans() : 'Never';

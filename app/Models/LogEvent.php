@@ -9,10 +9,6 @@ class LogEvent extends Model
 {
     use SoftDeletes;
 
-    protected $casts = [
-        'data' => 'array',
-    ];
-
     protected $fillable = [
         'market_id','event_name_id','session_id',
     ];

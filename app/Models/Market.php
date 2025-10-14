@@ -11,7 +11,13 @@ class Market extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['name','domain','path','time_zone_id','latest_unavailability'];
+    protected $fillable = [
+        'name',
+        'domain',
+        'path',
+        'time_zone_id',
+        'latest_unavailability'
+    ];
 
     public function serviceTitanJobs() {
         return $this->hasMany(LogServiceTitanJob::class);

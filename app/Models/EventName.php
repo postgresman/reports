@@ -9,7 +9,11 @@ class EventName extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['name','display_on_client','order'];
+    protected $fillable = [
+        'name',
+        'display_on_client',
+        'order'
+    ];
 
     public function logEvents() {
         return $this->hasMany(LogEvent::class);
